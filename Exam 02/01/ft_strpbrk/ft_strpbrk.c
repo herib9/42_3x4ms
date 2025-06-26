@@ -1,9 +1,8 @@
 char	*ft_strpbrek(const char *s1, const char *s2)
 {
-	int i;
-	int j;
+	int	i = 0;
+	int	j;
 	
-	i = 0;
 	if (!s1 || !s2)
 		return (0);
 	while (s2[i])

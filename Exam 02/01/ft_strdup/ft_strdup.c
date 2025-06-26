@@ -5,7 +5,7 @@
 char    *ft_strdup(char *src)
 {
 	int	i = 0;
-	char *dup;
+	char	*dup;
 
 	while(src[i])
 		i++;

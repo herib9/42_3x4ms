@@ -2,7 +2,7 @@
 
 void	print_bits(unsigned char octet)
 {
-	int i = 7;
+	int	i = 7;
 
 	while (i >= 0)
 	{

@@ -2,7 +2,7 @@
 
 char    *ft_strrev(char *str)
 {
-	char temp[255];
+	char	temp[255];
 	int	i = 0;
 	int 	j = 0;
 	
