@@ -1,26 +1,24 @@
 #include <unistd.h>
 
-void	repeat_alpha(char *c)
+void	repeat_alpha(char *s)
 {
-	int i;
-	int j;
+	int	i = 0;
+	int	repeat = 0;
 
-	i = 0;
-	while (*c)
+	while (s[i])
 	{
-		if (*c >= 65 && *c <= 90)
-			i = *c - 64;
-		else if (*c >= 97 && *c <= 122)
-			i = *c - 96;
+		if (s[i] >= 65 && s[i] <= 90)
+			repeat = s[i] - 64;
+		else if (s[i] >= 97 && s[i] <= 122)
+			repeat = s[i] - 96;
 		else
-			i = 1;
-		j = 0;
-		while (j < i)
+			repeat = 1;
+		while (repeat > 0)
 		{
-			write(1, c, 1);
-			j++;
+			write(1, &s[i], 1);
+			repeat++;
 		}
-		c++;
+		i++;
 	}
 }
 
@@ -32,7 +30,7 @@ int	main(int argc, char **argv)
 }
 
 
-void	repeat_alpha(char *c)
+/*void	repeat_alpha(char *c)
 {
 	int repeat = 0;
 
@@ -51,4 +49,4 @@ void	repeat_alpha(char *c)
 		}
 		c++;
 	}
-}
+}*/

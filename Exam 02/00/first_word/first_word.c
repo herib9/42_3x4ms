@@ -2,9 +2,8 @@
 
 void	fw(char *s)
 {
-	int	i;
+	int	i = 0;
 
-	i = 0;
 	while (s[i] <= 32)
 		i++;
 	while (s[i] != 32 && s[i] != 9)
