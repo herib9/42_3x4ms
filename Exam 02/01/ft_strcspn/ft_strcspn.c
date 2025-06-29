@@ -21,18 +21,12 @@ size_t	ft_strcspn(const char *s, const char *reject)
     return (i);
 }
 
-/*int main(int argc, char **argv)
-{
-    if (argc == 3)
-        ft_strcspn(argv[1], argv[2]);
-    write(1, "\n", 1);
-    return (0);
-}*/
-
 int	main(void)
 {
-	printf("%lu\n", ft_strcspn("hello123", "e0123456789"));
+	printf("%lu\n", ft_strcspn("hello123", "0123456789"));
 	printf("%lu\n", strcspn("hello123", "0123456789"));
+	printf("%lu\n", ft_strcspn("hellllo123", "gati"));
+	printf("%lu\n", strcspn("hellllo123", "gati"));
 }
 
 /*ejemplo: si *s es "hello123" y *reject es "0123456789", devuelve (i) que es 5.

@@ -26,6 +26,10 @@ size_t	ft_strspn(const char *s, const char *accept)
 
 int	main(void)
 {
-	printf("%lu\n", ft_strspn("hello123", "helo"));
-	printf("%lu\n", strspn("hello123", "helo"));
+	printf("%lu\n", ft_strspn("helelllo123", "helo"));
+	printf("%lu\n", strspn("helelllo123", "helo"));
+	printf("%lu\n", ft_strspn("hello123", "oh"));
+	printf("%lu\n", strspn("hello123", "oh"));
+	printf("%lu\n", ft_strspn("hellllo123", "gati"));
+	printf("%lu\n", strspn("hellllo123", "gati"));
 }

@@ -1,34 +1,33 @@
 #include <unistd.h>
+#include <stdio.h>
 
-int		max(int *tab, unsigned int len)
+int	max(int *tab, unsigned int len)
 {
 	int	result = 0;
-
-	len = 0;
-	while (tab[len])
+	int	i = 0;
+	
+	if (len == 0)
+		return (0);
+	
+	while (i < len)
 	{
-		if (tab[len] > result)
-			result = tab[len];
-		len++;
+		if (tab[i] > result)
+			result = tab[i];
+		i++;
 	}
 	return(result);
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	if (argc == 3)
-		max (argv[1], argv[2])
-	write(1, "\n", 1);
+	int	tab[] = {12, 2, 6, 14};
+	int	len = 3;
+	
+	printf("%i\n", max(tab, len));
 	return (0);
 }
 
-
-
-
-
-
-
-
+/*
 	argv[0][2] ---> char
 	argv[1] ---> char *
 
@@ -40,10 +39,13 @@ int	main(int argc, char **argv)
 
 	[ "hola ana", "que tal", "bien", NULL ] -----> char **matrix
 	tengo 3 punteros dentro de mi doble puntero
+	
 	matrix[0] ---> char *cero ---> "hola ana"
 	tengo 8 char dentro de mi puntero cero
+	
 	matrix[1] ---> char *uno ---> "que tal"
 	tengo 7 char dentro de mi puntero uno
+	
 	matrix[2] ---> char *dos ---> "bien"
 	tengo 4 char dentro de mi puntero dos
 
@@ -79,4 +81,4 @@ int	main(int argc, char **argv)
 		'h'
 
 
-	
+	*/
