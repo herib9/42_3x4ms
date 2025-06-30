@@ -9,7 +9,7 @@ seguido de un salto de línea.
 
 'a' se convierte en 'a', 'b' se convierte en 'bb', 'e' se convierte en 'eeeee', etc...
 
-El caso permanece sin cambios.
+El string permanece sin cambios.
 
 Si el número de argumentos no es 1, solo muestra un salto de línea.
 
