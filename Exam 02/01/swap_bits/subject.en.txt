@@ -3,8 +3,8 @@ Expected files   : swap_bits.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
-Escribe una función que tome un byte, intercambie sus mitades (como en el ejemplo) y
-devuelva el resultado.
+Escribe una función que tome un byte, intercambie sus mitades (como el ejemplo)
+y devuelva el resultado.
 
 Tu función debe ser declarada de la siguiente manera:
 

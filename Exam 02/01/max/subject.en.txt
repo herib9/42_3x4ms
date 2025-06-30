@@ -7,8 +7,8 @@ Escribe la siguiente función:
 
 int	max(int* tab, unsigned int len)
 
-El primer parámetro es un array de enteros, el segundo es el número de elementos en
-el array.
+El primer parámetro es un array de enteros, el segundo es el número de elementos
+en el array.
 
 La función devuelve el número más grande encontrado en el array.
 

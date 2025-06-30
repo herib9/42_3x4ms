@@ -3,7 +3,7 @@ Expected files   : inter.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome dos cadenas y muestre, sin dobles, los caracteres que aparecen en ambas cadenas, en el orden en que aparecen en la primera. 
+Escribe un programa que tome dos strings y muestre, sin dobles, los caracteres que aparecen en ambos strings, en el orden en que aparecen en el primero. 
 
 La pantalla será seguida por un \n. 
 

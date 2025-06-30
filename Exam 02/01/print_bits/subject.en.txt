@@ -3,8 +3,8 @@ Expected files   : print_bits.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe una función que tome un byte y lo imprima en binario SIN UN SALTO DE LÍNEA
-AL FINAL.
+Escribe una función que tome un byte y lo imprima en binario SIN UN SALTO DE 
+LÍNEA AL FINAL.
 
 Tu función debe ser declarada de la siguiente manera:
 

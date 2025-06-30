@@ -3,10 +3,11 @@ Expected files   : ft_atoi.c
 Allowed functions: None
 --------------------------------------------------------------------------------
 
-Escribe una función que convierta el argumento de cadena str a un entero (tipo int)
-y lo devuelva.
+Escribe una función que convierta el argumento del string str a un entero 
+(tipo int) y lo devuelva.
 
-Funciona de manera similar a la función atoi(const char *str) estándar, consulta el manual.
+Funciona de manera similar a la función atoi(const char *str) estándar,
+consulta el manual.
 
 Tu función debe declararse de la siguiente manera:
 

@@ -3,18 +3,18 @@ Expected files   : do_op.c
 Allowed functions: atoi, printf, write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome tres cadenas:
-- La primera y la tercera son representaciones de enteros con signo en base 10
+Escribe un programa que tome tres strings:
+- El primero y el tercero son representaciones de enteros con signo en base 10
   que caben en un int.
-- La segunda es un operador aritmético elegido de: + - * / %
+- El segundo es un operador aritmético elegido de: + - * / %
 
 El programa debe mostrar el resultado de la operación aritmética solicitada,
 seguido de una nueva línea. Si el número de parámetros no es 3, el programa
 simplemente muestra una nueva línea.
 
-Puedes asumir que las cadenas no tienen errores ni caracteres extraños. Los números negativos,
-en la entrada o en la salida, tendrán un y solo un '-' inicial. El
-resultado de la operación cabe en un int.
+Puedes asumir que las cadenas no tienen errores ni caracteres extraños. Los 
+números negativos, en la entrada o salida, tendrán un y solo un '-' inicial. 
+El resultado de la operación cabe en un int.
 
 Ejemplos:
 

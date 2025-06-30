@@ -3,24 +3,21 @@
 
 int	max(int *tab, unsigned int len)
 {
-	int	result = 0;
+	int	max = 0;
 	int	i = 0;
-	
-	if (len == 0)
-		return (0);
 	
 	while (i < len)
 	{
-		if (tab[i] > result)
-			result = tab[i];
+		if (tab[i] > max)
+			max = tab[i];
 		i++;
 	}
-	return(result);
+	return(max);
 }
 
 int	main(void)
 {
-	int	tab[] = {12, 2, 6, 14};
+	int	tab[] = {12, 2, 16, 14};
 	int	len = 3;
 	
 	printf("%i\n", max(tab, len));

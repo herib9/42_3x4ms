@@ -9,10 +9,10 @@ void	lw(char *s)
 	i--;
 	while (s[i] && s[i] <= 32)
 		i--;
-	while (s[i] && s[i] != ' ' && s[i] != '\t')
+	while (s[i] && s[i] > 32)
 		i--;
 	i++;
-	while (s[i] && s[i] != ' ' && s[i] != '\t')
+	while (s[i] && s[i] > 32)
 	{
 		write(1, &s[i], 1);
 		i++;

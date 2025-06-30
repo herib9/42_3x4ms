@@ -3,11 +3,10 @@ Expected files   : union.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome dos cadenas y muestre, sin duplicados, los
-caracteres que aparecen en alguna de las dos cadenas.
+Escribe un programa que tome dos strings y muestre, sin duplicados, los
+caracteres que aparecen en alguno de los dos strings.
 
-La visualización será en el orden en que aparecen los caracteres en la línea de comandos y
-será seguida de un \n.
+La visualización será en el orden en que aparecen los caracteres en la línea de comandos y será seguida de un \n.
 
 Si el número de argumentos no es 2, el programa mostrará \n.
 

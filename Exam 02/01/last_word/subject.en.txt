@@ -3,10 +3,11 @@ Expected files   : last_word.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome una cadena y muestre su última palabra seguida de un \n.
+Escribe un programa que tome un string y muestre su última palabra seguida de 
+un \n.
 
-Una palabra es una sección de cadena delimitada por espacios/tabulaciones o por el inicio/fin de
-la cadena.
+Una palabra es una sección de string delimitada por espacios/tabulaciones o por
+el inicio/fin del string.
 
 Si el número de parámetros no es 1, o no hay palabras, muestra una nueva línea.
 
