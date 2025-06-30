@@ -3,7 +3,7 @@ Expected files   : rot_13.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome una cadena y la muestre, reemplazando cada una de sus
+Escribe un programa que tome un string y lo muestre, reemplazando cada una de sus
 letras por la letra 13 espacios adelante en orden alfabético.
 
 'z' se convierte en 'm' y 'Z' se convierte en 'M'. El caso permanece sin cambios.

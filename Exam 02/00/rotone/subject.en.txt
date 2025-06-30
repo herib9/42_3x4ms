@@ -3,10 +3,11 @@ Expected files   : rotone.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome una cadena y la muestre, reemplazando cada una de sus
-letras por la siguiente en orden alfabético.
+Escribe un programa que tome un string y lo muestre, reemplazando cada una de 
+sus letras por la siguiente en orden alfabético.
 
-'z' se convierte en 'a' y 'Z' se convierte en 'A'. El caso permanece sin cambios.
+'z' se convierte en 'a' y 'Z' se convierte en 'A'. El string permanece sin 
+cambios.
 
 La salida estará seguida de un \n.
 

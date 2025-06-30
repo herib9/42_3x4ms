@@ -3,9 +3,10 @@ Expected files   : ft_putstr.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe una función que muestre una cadena en la salida estándar.
+Escribe una función que muestre un string en la salida estándar.
 
-El puntero pasado a la función contiene la dirección del primer carácter de la cadena.
+El puntero pasado a la función contiene la dirección del primer carácter del
+string.
 
 Tu función debe ser declarada de la siguiente manera:
 

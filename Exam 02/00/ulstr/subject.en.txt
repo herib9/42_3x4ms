@@ -3,7 +3,7 @@ Expected files   : ulstr.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome una cadena y invierta el caso de todas sus letras.
+Escribe un programa que tome un string y invierta el caso de todas sus letras.
 Los demás caracteres permanecen sin cambios.
 
 Debes mostrar el resultado seguido de un '\n'.

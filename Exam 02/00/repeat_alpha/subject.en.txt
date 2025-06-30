@@ -3,7 +3,7 @@ Expected files   : repeat_alpha.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa llamado repeat_alpha que tome una cadena y la muestre
+Escribe un programa llamado repeat_alpha que tome un string y lo muestre
 repitiendo cada carácter alfabético tantas veces como su índice alfabético,
 seguido de un salto de línea.
 

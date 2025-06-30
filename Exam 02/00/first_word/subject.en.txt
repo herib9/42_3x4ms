@@ -3,11 +3,11 @@ Expected files   : first_word.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome una cadena y muestre su primera palabra, seguida de un
-salto de línea.
+Escribe un programa que tome un string y muestre su primera palabra, seguida de 
+un salto de línea.
 
-Una palabra es una sección de una cadena delimitada por espacios/tabulaciones o por el 
-inicio/fin de la cadena.
+Una palabra es una sección de un string delimitado por espacios/tabulaciones o 
+por el inicio/fin del string.
 
 Si el número de parámetros no es 1, o si no hay palabras, simplemente muestra
 un salto de línea.
