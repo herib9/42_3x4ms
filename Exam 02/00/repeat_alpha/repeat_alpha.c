@@ -16,7 +16,7 @@ void	repeat_alpha(char *s)
 		while (repeat > 0)
 		{
 			write(1, &s[i], 1);
-			repeat++;
+			repeat--;
 		}
 		i++;
 	}
