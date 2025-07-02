@@ -8,7 +8,7 @@ int	*ft_rrange(int start, int end)
 	//if (!nums)
 	//	return (NULL);
 	//podemos omitir estas dos ultimas lineas
-	while (end >= start)
+	while (start <= end)
 	{
 		nums[i] = end;
 		i++;

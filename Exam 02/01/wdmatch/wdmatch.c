@@ -11,7 +11,7 @@ void	wdmatch(char *s1, char *s2)
 			i++;
 		j++;
 	}
-	if (!s1[i])
+	if (s1[i] == '\0')
 		write(1, s1, i);
 }
 int main(int argc, char **argv)

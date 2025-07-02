@@ -8,7 +8,7 @@ void	inter(char *s1, char *s2)
 	while (s1[i])
 	{
 		j = 0;
-		while (j < i && s1[j] != s1[i])
+		while (j < i && s1[j] != s1[i])		
 			j++;
 		if (j == i)
 		{
@@ -30,3 +30,12 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
+
+/*
+el 2º while comprueba que una letra en s1 no esté repetida
+si j == i no esta repetida
+mientras s2[j] exista y s2[j] sea diferente a s1[i]
+avanza j
+si s2[j] no es el final, quiere decir que hubo coincidencia
+escribe s1[i] y avanza
+*/  

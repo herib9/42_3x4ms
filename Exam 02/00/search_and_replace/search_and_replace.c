@@ -4,7 +4,7 @@ void	sr(char *s, char *old, char *new)
 {
 	int	i = 0;
 
-	while (s[i] && old[1] == '\0' && new[1] == '\0')
+	while (s[i] && new[1] == '\0')
 	{
 		if (s[i] == *old)
 			s[i] = *new;
@@ -20,3 +20,19 @@ int	main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
+
+/* otra forma de hacerla seria
+
+void	sr(char *s, char *old, char *new)
+{
+	int	i = 0;
+
+	while (s[i] && new[1] == '\0')
+	{
+		if (s[i] == *old)
+			write(1, new, 1);
+		else
+			write(1, &s[i], 1);
+		i++;
+	}
+}*/

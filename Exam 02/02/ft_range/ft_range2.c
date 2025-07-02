@@ -21,7 +21,7 @@ int	*ft_range(int start, int end)
 
 int	main()
 {
-	int	*arr = ft_rrange(0, 4);
+	int	*arr = ft_range(0, 4);
 	int	size = 0;
 
 	while (size < 5)
