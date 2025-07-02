@@ -11,7 +11,7 @@ void	rws(char *s)
 	while (s[i])
 		i++;
 	i--;
-	while (i >= 0)
+	while (s[i])
 	{
 		while (i >= 0 && (s[i] == ' ' || s[i] == '\t'))
 			i--;
@@ -24,7 +24,7 @@ void	rws(char *s)
 			write(1, &s[start], 1);
 			start++;
 		}
-		if (s[i] > 1)
+		if (i > 0)
 			write(1, " ", 1);
 	}
 }
