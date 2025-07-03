@@ -3,7 +3,6 @@
 int ft_atoi(char *s)
 {
 	int n = 0;
-	int neg = 1;
 
 	while (*s >= '0' && *s <= '9')
 	{
@@ -20,11 +19,11 @@ void ft_putnbr(int n)
 	write(1, &"0123456789"[n % 10], 1);
 }
 
-void tab_mult(char *c)
+void tab_mult(char *s)
 {
-	int n;
+	int n = ft_atoi(s);
 	int i = 1;
-	n = ft_atoi(c);
+	
 	while (i < 10)
 	{
 		ft_putnbr(i);

@@ -3,16 +3,32 @@
 int	*ft_rrange(int start, int end)
 {
 	int i = 0;
-	int size = (end - start + 1);
-	int *nums = (int *) malloc(size * sizeof(int));
+	int size; 
+	if (start < end)
+		size = (end - start + 1);
+	else
+		size = (start - end + 1);
+	int *nums = malloc(size * sizeof(int));
 	//if (!nums)
 	//	return (NULL);
 	//podemos omitir estas dos ultimas lineas
-	while (start <= end)
+	if (start < end)
 	{
-		nums[i] = end;
-		i++;
-		end--;
+		while (start <= end)
+		{
+			nums[i] = end;
+			i++;
+			end--;
+		}
+	}
+	else
+	{
+		while (start >= end)
+		{
+			nums[i] = end;
+			i++;
+			end++;
+		}
 	}
 	return (nums);
 }
@@ -21,10 +37,10 @@ int	*ft_rrange(int start, int end)
 
 int	main()
 {
-	int	*arr = ft_rrange(0, 4);
+	int	*arr = ft_rrange(0, -3);
 	int	size = 0;
 
-	while (size < 5)
+	while (size < 4)
 	{
 		printf("%i ", arr[size]);
 		size++;
