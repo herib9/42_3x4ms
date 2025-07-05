@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	str(char *s)
+void	strcap(char *s)
 {
 	int	i = 0;
 
