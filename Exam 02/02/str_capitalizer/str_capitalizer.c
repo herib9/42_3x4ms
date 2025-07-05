@@ -15,9 +15,16 @@ void	cap(char *s)
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	if (argc == 2)
-		cap(argv[1]);
-	write(1, "\n", 1);
+	int	i = 1;
+	
+	if (ac == 1)
+		write(1, "\n", 1);
+	while (ac > i)
+	{
+		cap(argv[i]);
+		write(1, "\n", 1);
+		i++;
+	}
 }
