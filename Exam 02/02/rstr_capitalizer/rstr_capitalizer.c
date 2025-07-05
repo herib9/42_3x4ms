@@ -17,9 +17,17 @@ void    rcap(char *s)
     }
 }
 
-int main(int argc, char **argv)
+int     main(int ac, char **av)
 {
-	if (argc == 2)
-		rcap(argv[1]);
-	write(1, "\n", 1);
+        int     i = 1;
+
+        if (ac == 1)
+                 write(1, "\n", 1);
+        while (i < ac)
+        {
+                rstr(av[i]);
+                write(1, "\n", 1);
+                i++;
+        }
 }
+
