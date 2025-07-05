@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void    rstr(char *s)
+void    rcap(char *s)
 {
 	int	i = 0;
 
@@ -18,6 +18,6 @@ void    rstr(char *s)
 int main(int argc, char **argv)
 {
 	if (argc == 2)
-		rstr(argv[1]);
+		rcap(argv[1]);
 	write(1, "\n", 1);
 }
