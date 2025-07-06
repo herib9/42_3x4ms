@@ -20,3 +20,27 @@ int	main(int argc, char **argv)
 		rev(argv[1]);
 	write(1, "\n", 1);
 }
+
+/*
+si te pide un char * como devolucion y no te deja usar write ni printf, esta seria la funcion
+
+char	*rev_print(char *s)
+{
+	int	i = 0;
+	int	len = 0;
+	int	temp;
+	
+	while (s[len])
+		len++;
+	len--;
+	while (i < len)
+	{
+		temp = s[i];
+		s[i] = s[len];
+		s[len] = temp;
+		i++;
+		len--;
+	}
+	return (s);
+}
+*/
