@@ -7,7 +7,7 @@ void	lw(char *s)
 	while (s[i])
 		i++;
 	i--;
-	while (s[i] <= 32)
+	while (s[i] && s[i] <= 32)
 		i--;
 	while (s[i] > 32)
 		i--;

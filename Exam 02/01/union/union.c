@@ -18,7 +18,7 @@ void	ftunion(char *s1, char *s2)
 
 int	main(int ac, char **av)
 {
-	char	s2[256] = {0};
+	char	s2[256] = {};
 
 	if (ac == 3)
 	{
