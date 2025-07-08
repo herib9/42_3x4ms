@@ -1,0 +1,37 @@
+Assignment name  : ft_list_size
+Expected files   : ft_list_size.c
+Allowed functions: 
+--------------------------------------------------------------------------------
+
+Escribe una función que devuelva el número de elementos en la lista enlazada
+que se le pasa como argumento.
+
+Debe ser declarada de la siguiente manera:
+
+int	ft_list_size(t_list *begin_list);
+
+Debes utilizar la siguiente estructura y entregarla como un archivo llamado
+ft_list.h:
+
+typedef struct    s_list
+{
+    struct s_list *next;
+    void          *data;
+}                 t_list;
+
+--------------------------------------------------------------------------------
+
+Write a function that returns the number of elements in the linked list that's
+passed to it.
+
+It must be declared as follows:
+
+int	ft_list_size(t_list *begin_list);
+
+You must use the following structure in your program ft_list_size.c :
+
+typedef struct    s_list
+{
+    struct s_list *next;
+    void          *data;
+}                 t_list;

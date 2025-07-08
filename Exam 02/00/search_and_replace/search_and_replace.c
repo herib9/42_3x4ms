@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-/* otra forma de hacerla seria
+/* otra forma seria
 
 void	sr(char *s, char *old, char *new)
 {
