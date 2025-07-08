@@ -1,9 +1,58 @@
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_separate(char c)
+char	**ft_split(char *s)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
+	int	i = 0;
+	int	j;
+	char	*start;
+	char	**word = malloc(100 * sizeof(char *));
+	
+	if(!word)
+		return (NULL);
+	while(*s)
+	{
+		while(*s == ' ' || *s == '\t' || *s == '\n')
+			s++;
+		if(!s)
+			break;
+		start = s;
+		while(*s && !(*s == ' ' || *s == '\t' || *s == '\n'))
+			s++;
+		word[i] = malloc(s - start + 1);
+		//if(!word[i])
+		//	return (NULL);
+		j = 0;
+		while(start < s)
+			word[i][j++] = *start++;
+		word[i][j] = '\0';
+		i++;
+	}
+	word[i] = NULL;
+	return(word);
 }
+
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+	{
+		char **words = ft_split(av[1]);
+		int	i = 0;
+		while (words[i])
+		{
+			printf("palabra %d: %s\n", i + 1, words[i]);
+			free(words[i]);
+			i++;
+		}
+		free(words);
+	}
+	return (0);
+}
+
+
+/*int	ft_separate(char c)
+	return (c == ' ' || c == '\t' || c == '\n');
 
 int	ft_count(char *s)
 {
@@ -79,4 +128,4 @@ char	**ft_split(char *s)
 	}
 	split[i] = NULL;
 	return (split);
-}
+}*/

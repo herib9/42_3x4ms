@@ -1,31 +1,29 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int start, int end)
-{
-	int	*array;
-	int	len;
-	int	avanza;
-	int	i = 0;
-	
-	if (start > end)
-		len = start - end + 1;
-	else
-		len = end - start + 1;
-	array = malloc(sizeof(int) * len);
-	if (!array)
-		return NULL;
-	if (start < end)
-		avanza = 1;
-	else
-		avanza = -1;
-	while (i < len)
-	{
-		array[i] = start + (i * avanza);
-		i++;
-	}
-	return array;
+int     *ft_range(int start, int end)
+{       
+        int     i = 0;
+        int     size = 0;
+        int     *num;
+        
+        if (start > end)
+                size = (start - end + 1);
+        else
+                size = (end - start + 1);
+        num = malloc(size * sizeof(int));
+        while (i < size)
+        {
+                num[i] = start;
+                if (start < end)
+                        start++;
+                else if (start > end)
+                        start--;
+                i++;
+        }
+        return (num);
 }
+
 
 int main(void)
 {

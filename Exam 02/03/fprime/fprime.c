@@ -9,8 +9,9 @@ void	fprime(int nbr)
 		return ;
 	if (nbr == 1)
 		printf("1");
-	while (nbr > div++)
-	{
+	while (nbr > div)
+	{	
+		div++;
 		if (nbr % div == 0)
 		{
 			printf("%d", div);

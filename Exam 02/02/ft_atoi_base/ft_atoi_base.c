@@ -8,10 +8,12 @@ int	ft_atoi_base(const char *str, int str_base)
 	//if (str_base <= 1 || str_base > 16)
         //return (0);
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			signo = -1;
-                i++;
+        {
+                if (str[i] == '-')
+                {
+                        signo = -1;
+                        i++;
+                }
         }
 	while (str[i])
 	{

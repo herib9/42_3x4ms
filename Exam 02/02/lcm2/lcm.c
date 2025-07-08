@@ -18,13 +18,15 @@ unsigned int    lcm(unsigned int a, unsigned int b)
         return (r / a);
 }       
 
-int     main(void)
+int     main()
 {       
         printf("%i\n", lcm(-1, 2932));
         printf("%i\n", lcm(3, 5));
 }
 
 //(lcm)ft_minimo_comun_multiplo(a, b) = (ft_absolute)ft_valor_absoluto(a * b) / (hcf)ft_maximo_comun_divisor(a, b)
+
+
 //lcm(a, b) = (|a * b|) / (hcf(a, b))
 //producto = a * b
 

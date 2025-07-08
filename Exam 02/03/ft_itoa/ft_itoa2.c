@@ -14,9 +14,9 @@ char *ft_itoa(int nbr)
 	        num = num / 10;		// num /= 10
 	        len++;
 	}
-	result = malloc(sizeof(char) * (len + 1));
-	if (result == NULL) 
-	        return NULL;
+	result = malloc(len + 1);
+	//if (result == NULL) 
+	//        return NULL;
 	result[len] = '\0';
 	if (nbr == 0)
 		result[0] = '0';
@@ -25,17 +25,19 @@ char *ft_itoa(int nbr)
 	        result[0] = '-';
 	        nbr = -nbr;
 	}
+	len--;
 	while (nbr) 
 	{
-	        result[--len] = nbr % 10 + '0';
+	        result[len] = nbr % 10 + '0';
 	        nbr /= 10;
-	}
+	        len--;
+	}	
 	return (result);
 }
 
 int main(void)
 {
-	int n = 647;
+	int n = -123;
 	printf("%s\n", ft_itoa(n));
 }
 

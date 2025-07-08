@@ -6,8 +6,6 @@ void	rws(char *s)
 	int	start = 0;
 	int	end = 0;
 
-	while (s[i] == ' ' && s[i] == '\t')
-		i++;
 	while (s[i])
 		i++;
 	i--;
@@ -18,7 +16,8 @@ void	rws(char *s)
 		end = i;
 		while (i >= 0 && s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
 			i--;
-		start = i + 1;
+		i++;
+		start = i;
 		while (start <= end)
 		{
 			write(1, &s[start], 1);
@@ -26,6 +25,7 @@ void	rws(char *s)
 		}
 		if (i > 0)
 			write(1, " ", 1);
+		i--;	
 	}
 }
 
