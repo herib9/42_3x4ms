@@ -1,0 +1,54 @@
+Assignment name  : lcm
+Expected files   : lcm.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Escribe una función que tome dos enteros sin signo como parámetros y devuelva
+el Mínimo Común Múltiplo (LCM) calculado de esos parámetros.
+
+El LCM (Mínimo Común Múltiplo) de dos enteros no nulos es el menor entero 
+positivo divisible por ambos enteros.
+
+Un LCM se puede calcular de dos maneras:
+
+- Puedes calcular todos los múltiplos de cada entero hasta que tengas un 
+múltiplo común diferente de 0.
+
+- Puedes usar el HCF (Mayor Común Factor) de estos dos enteros y calcular de 
+la siguiente manera:
+
+	LCM(x, y) = | x * y | / HCF(x, y)
+
+  | x * y | significa "Valor absoluto del producto de x por y".
+
+Si al menos uno de los enteros es nulo, el LCM es igual a 0.
+
+Tu función debe tener el siguiente prototipo:
+
+unsigned int    lcm(unsigned int a, unsigned int b)
+
+--------------------------------------------------------------------------------
+
+Write a function who takes two unsigned int as parameters and returns the 
+computed LCM of those parameters.
+
+LCM (Lowest Common Multiple) of two non-zero integers is the smallest postive
+integer divisible by the both integers.
+
+A LCM can be calculated in two ways:
+
+- You can calculate every multiples of each integers until you have a common
+multiple other than 0
+
+- You can use the HCF (Highest Common Factor) of these two integers and 
+calculate as follows:
+
+	LCM(x, y) = | x * y | / HCF(x, y)
+  
+  | x * y | means "Absolute value of the product of x by y"
+
+If at least one integer is null, LCM is equal to 0.
+
+Your function must be prototyped as follows:
+
+  unsigned int    lcm(unsigned int a, unsigned int b);
