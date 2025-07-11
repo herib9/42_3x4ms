@@ -3,7 +3,8 @@ Expected files   : pgcd.c
 Allowed functions: printf, atoi, malloc, free
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome dos strings representando dos enteros estrictamente positivos que quepan en un int.
+Escribe un programa que tome dos strings representando dos enteros estrictamente
+positivos que quepan en un int.
 
 Muestra su Máximo Común Divisor seguido de una nueva línea (siempre es un
 entero estrictamente positivo).
