@@ -61,3 +61,25 @@ int main(void)
 
     return (0);
 }
+
+/*
+Assignment name  : ft_atoi_base
+Expected files   : ft_atoi_base.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Escribe una función que convierta el argumento del string str (base N <= 16)
+a un entero (base 10) y lo devuelva.
+
+Los caracteres reconocidos en la entrada son: 0123456789abcdef
+Estos, por supuesto, deben recortarse según la base solicitada. Por ejemplo,
+la base 4 reconoce "0123" y la base 16 reconoce "0123456789abcdef".
+
+Las mayúsculas también deben ser reconocidas: "12fdb3" es lo mismo que "12FDB3".
+
+Los signos negativos ('-') se interpretan solo si son el primer carácter del
+string.
+
+int	ft_atoi_base(const char *str, int str_base)
+--------------------------------------------------------------------------------
+*/
