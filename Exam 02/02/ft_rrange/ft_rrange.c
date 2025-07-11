@@ -47,7 +47,8 @@ Escribe la siguiente función:
 int     *ft_rrange(int start, int end);
 
 Debe asignar (con malloc()) un array de enteros, llenarlo con valores 
-consecutivos que comienzan en end y terminan en start (¡Incluyendo start y end!) luego devolver un puntero al primer valor del array.
+consecutivos que comienzan en end y terminan en start (¡Incluyendo start y end!)
+luego devolver un puntero al primer valor del array.
 
 Ejemplos:
 
