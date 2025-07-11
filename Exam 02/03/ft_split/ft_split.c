@@ -49,28 +49,19 @@ int	main(int ac, char **av)
 }
 
 /*
-Assignment name  : ft_list_remove_if
-Expected files   : ft_list_remove_if.c
-Allowed functions: free
+Assignment name  : ft_split
+Expected files   : ft_split.c
+Allowed functions: malloc
 --------------------------------------------------------------------------------
 
-Escriba una función llamada ft_list_remove_if que elimine de la lista pasada
-cualquier elemento cuyos datos sean "iguales" a los datos de referencia.
+Escribe una función que tome una cadena, la divida en palabras y las devuelva 
+como un array de cadenas terminado en NULL.
 
-Se declarará de la siguiente manera :
+Una "palabra" se define como una parte de una cadena delimitada por 
+espacios/tabulaciones/nuevas líneas, o por el inicio/fin de la cadena.
 
-void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
+Tu función debe ser declarada de la siguiente manera:
 
-cmp toma dos void* y devuelve 0 cuando ambos parámetros son iguales.
-
-Debe utilizar el archivo ft_list.h, que contendrá:
-
-$>cat ft_list.h
-typedef struct      s_list
-{
-    struct s_list   *next;
-    void            *data;
-}                   t_list;
-$>
+char    **ft_split(char *str)
 --------------------------------------------------------------------------------
 */
