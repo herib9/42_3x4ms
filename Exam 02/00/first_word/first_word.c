@@ -21,7 +21,6 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-
 /*
 Assignment name  : first_word
 Expected files   : first_word.c
