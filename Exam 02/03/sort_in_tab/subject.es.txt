@@ -13,16 +13,4 @@ tamaño de 'size', en orden ascendente.
 Los dobles deben preservarse.
 
 La entrada es siempre coherente.
-
 --------------------------------------------------------------------------------
-
-Write the following function:
-
-void sort_int_tab(int *tab, unsigned int size);
-
-It must sort (in-place) the 'tab' int array, that contains exactly 'size'
-members, in ascending order.
-
-Doubles must be preserved.
-
-Input is always coherent.
