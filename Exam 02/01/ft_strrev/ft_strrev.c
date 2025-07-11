@@ -31,3 +31,19 @@ int main(void)
 	printf("str despues: %s\n", str);
 	return (0);
 }
+
+/*
+Assignment name  : ft_strrev
+Expected files   : ft_strrev.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Escriba una función que invierta (en su lugar) un string.
+
+Debe devolver su parámetro.
+
+Su función debe ser declarada como sigue:
+
+char    *ft_strrev(char *str)
+--------------------------------------------------------------------------------
+*/

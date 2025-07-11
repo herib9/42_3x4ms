@@ -8,10 +8,4 @@ Reproduzca exactamente el comportamiento de la función strspn (man strspn).
 El prototipo de la función debe ser el siguiente:
 
 size_t	ft_strspn(const char *s, const char *accept)
-
 --------------------------------------------------------------------------------
-Reproduce exactly the behavior of the strspn function (man strspn).
-
-The function should be prototyped as follows:
-
-size_t	ft_strspn(const char *s, const char *accept);

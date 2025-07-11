@@ -30,3 +30,17 @@ int	main(int argc, char **argv)
 	printf("%s\n", s);
 	return (0);
 }
+
+/*
+Assignment name  : ft_strdup
+Expected files   : ft_strdup.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+
+Reproduce el comportamiento de la función strdup (man strdup).
+
+Tu función debe ser declarada de la siguiente manera:
+
+char    *ft_strdup(char *src)
+--------------------------------------------------------------------------------
+*/

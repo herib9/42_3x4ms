@@ -29,3 +29,17 @@ int	main(int ac, char **av)
 		printf("%s\n", ft_strpbrk(av[1], av[2]));
 	}
 }
+
+/*
+Assignment name	: ft_strpbrk
+Expected files	: ft_strpbrk.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Reproduzca exactamente el comportamiento de la función strpbrk (man strpbrk).
+
+La función debe ser prototipada como sigue:
+
+char	*ft_strpbrk(const char *s1, const char *s2)
+--------------------------------------------------------------------------------
+*/

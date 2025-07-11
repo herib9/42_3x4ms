@@ -31,16 +31,14 @@ int	main(void)
 	argv[0][2] ---> char
 	argv[1] ---> char *
 
-
-
 	char *argv2;
 
 	argv2[0] -----> char c; 
 
-	[ "hola ana", "que tal", "bien", NULL ] -----> char **matrix
+	[ "hola heri", "que tal", "bien", NULL ] -----> char **matrix
 	tengo 3 punteros dentro de mi doble puntero
 	
-	matrix[0] ---> char *cero ---> "hola ana"
+	matrix[0] ---> char *cero ---> "hola heri"
 	tengo 8 char dentro de mi puntero cero
 	
 	matrix[1] ---> char *uno ---> "que tal"
@@ -52,12 +50,12 @@ int	main(void)
 	matrix[0][2] ---> char ---> 'l'
 	el caracter en la posicion 2 del puntero 0 de mi doble puntero
 
+
 	"hola herib" ----> char *str
 	tengo 10 char dentro de mi puntero
 	str[7] ---> char ---> 'r'
 
-
-	{ [ "hola", "ana" ] , [ "que tal", "herib" ] } ---> char ***triple
+	{ [ "hola", "heri" ] , [ "que tal", "herib" ] } ---> char ***triple
 	
 	triple[0] ---> char **doble_cero
 	triple[0][1] ---> char *puntero_uno_del_doble_cero
@@ -67,18 +65,35 @@ int	main(void)
 	puntero[0] ---> char ---> 'h'
 
 
-	( { [ "hola", "ana" ] , [ "que tal", "herib" ] } , 
-	  { [ "hola", "ana" ] , [ "que tal", "herib" ] } ,
-	  { [ "hola", "ana" ] , [ "que tal", "herib" ] } ) ----> char ****cuarteto
+	( { [ "hola", "heri" ] , [ "que tal", "herib" ] } , 
+	  { [ "hola", "heri" ] , [ "que tal", "herib" ] } ,
+	  { [ "hola", "heri" ] , [ "que tal", "herib" ] } ) ----> char ****cuarteto
 
 	cuarteto[0] ---> char ***triple_cero
-		{ ["hola", "ana"], ["que tal", "herib"] } 
+		{ ["hola", "heri"], ["que tal", "herib"] } 
 	cuarteto[0][0] ---> char **doble_cero_del_triple_cero
-		["hola", "ana"]
+		["hola", "heri"]
 	cuarteto[0][0][0] ---> char *puntero_cero_del_doble_cero_del_triple_cero
 		"hola"
 	cuarteto[0][0][0][0] ---> char ---> 'h'
 		'h'
+*/
 
+/*
+Assignment name  : max
+Expected files   : max.c
+Allowed functions:
+--------------------------------------------------------------------------------
 
-	*/
+Escribe la siguiente función:
+
+int	max(int* tab, unsigned int len)
+
+El primer parámetro es un array de enteros, el segundo es el número de elementos
+en el array.
+
+La función devuelve el número más grande encontrado en el array.
+
+Si el array está vacío, la función devuelve 0.
+--------------------------------------------------------------------------------
+*/

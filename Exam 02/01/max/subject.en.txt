@@ -13,16 +13,4 @@ en el array.
 La función devuelve el número más grande encontrado en el array.
 
 Si el array está vacío, la función devuelve 0.
-
 --------------------------------------------------------------------------------
-
-Write the following function:
-
-int	max(int* tab, unsigned int len);
-
-The first parameter is an array of int, the second is the number of elements in
-the array.
-
-The function returns the largest number found in the array.
-
-If the array is empty, the function returns 0.

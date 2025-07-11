@@ -28,8 +28,25 @@ int	main(void)
 	return (0);
 }
 
-
 /*teniendo el numero 318, este proceso haria:
 	 * num(0) = 0 * 10 + (3 - 0) = 3
 	 * num(3) = 3 * 10 + (1 - 0) = 31
 	 * num(31) = 31 * 10 + (8 - 0) = 318*/
+	 
+/*
+Assignment name  : ft_atoi
+Expected files   : ft_atoi.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Escribe una función que convierta el argumento del string str a un entero 
+(tipo int) y lo devuelva.
+
+Funciona de manera similar a la función atoi(const char *str) estándar,
+consulta el manual.
+
+Tu función debe declararse de la siguiente manera:
+
+int	ft_atoi(const char *str)
+--------------------------------------------------------------------------------
+*/
