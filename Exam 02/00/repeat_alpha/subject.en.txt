@@ -7,7 +7,7 @@ Escribe un programa llamado repeat_alpha que tome un string y lo muestre
 repitiendo cada carácter alfabético tantas veces como su índice alfabético,
 seguido de un salto de línea.
 
-'a' se convierte en 'a', 'b' se convierte en 'bb', 'e' se convierte en 'eeeee', etc...
+'a' se convierte en 'a', 'b' se convierte en 'bb', 'e' se convierte en 'eeeee'...
 
 El string permanece sin cambios.
 
@@ -27,5 +27,4 @@ $>
 $>./repeat_alpha "" | cat -e
 $
 $>
-
 --------------------------------------------------------------------------------

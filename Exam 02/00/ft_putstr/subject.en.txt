@@ -11,5 +11,4 @@ string.
 Tu función debe ser declarada de la siguiente manera:
 
 void	ft_putstr(char *str)
-
 --------------------------------------------------------------------------------
