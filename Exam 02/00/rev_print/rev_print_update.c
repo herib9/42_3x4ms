@@ -1,4 +1,4 @@
-char	*rev(char *s)
+char	*rev_print(char *s)
 {
 	int	i = 0;
 	int	len = 0;
