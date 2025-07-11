@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void	sit(int *tab, unsigned int size)
 {
 	unsigned int	i = 0;
@@ -14,6 +16,21 @@ void	sit(int *tab, unsigned int size)
 		}
 		else
 			i++;
+	}
+}
+
+int	main(void)
+{
+	int	tab[] = {12, 2, 16, 14};
+	int	len = 4;
+	int	i = 0;
+	
+	sit(tab, len);
+	
+	while (i < len)
+	{
+		printf("%i ", tab[i]);
+		i++;
 	}
 }
 
