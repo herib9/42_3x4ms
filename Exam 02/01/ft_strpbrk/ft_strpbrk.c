@@ -31,15 +31,12 @@ int	main(int ac, char **av)
 }
 
 /*
-Assignment name	: ft_strpbrk
-Expected files	: ft_strpbrk.c
-Allowed functions: None
 --------------------------------------------------------------------------------
+Reproduce el comportamiento de la función strpbrk (string pointer break)
+(man strpbrk).
 
-Reproduzca exactamente el comportamiento de la función strpbrk (man strpbrk).
-
-La función debe ser prototipada como sigue:
-
-char	*ft_strpbrk(const char *s1, const char *s2)
+Busca la primera ocurrencia en s1 de cualquier carácter que esté en s2
+Devuelve un puntero a la posición donde encontró la primera coincidencia
+Si no encuentra ninguna coincidencia, devuelve NULL.
 --------------------------------------------------------------------------------
 */
