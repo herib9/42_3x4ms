@@ -29,20 +29,14 @@ int	main(void)
 	printf("%lu\n", strcspn("hellllo123", "gati"));
 }
 
-/*ejemplo: si *s es "hello123" y *reject es "0123456789", devuelve (i) que es 5.
-Básicamente, cuenta los caracteres de *s hasta encontrar uno que aparezca en *reject.
-Si no hay coincidencias, recorre *s y cuenta lo que mide.*/
+// ejemplo: si *s es "hello123" y *reject es "0123456789", devuelve (i) que es 5.
 
 /*
-Assignment name	: ft_strcspn
-Expected files	: ft_strcspn.c
-Allowed functions: None
 --------------------------------------------------------------------------------
-
 Reproduce exactamente el comportamiento de la función strcspn (man strcspn).
+(string complement span)
 
-La función debe ser prototipada de la siguiente manera:
-
-size_t	ft_strcspn(const char *s, const char *reject)
+Básicamente, cuenta los caracteres de *s hasta encontrar uno que aparezca en 
+*reject. Si no hay coincidencias, recorre *s y cuenta lo que mide.
 --------------------------------------------------------------------------------
 */
