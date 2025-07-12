@@ -33,17 +33,9 @@ int main(void)
 }
 
 /*
-Assignment name  : ft_strrev
-Expected files   : ft_strrev.c
-Allowed functions:
 --------------------------------------------------------------------------------
-
-Escriba una función que invierta (en su lugar) un string.
-
-Debe devolver su parámetro.
-
-Su función debe ser declarada como sigue:
-
-char    *ft_strrev(char *str)
+strrev invierte string al completo letra a letra, usando para ello una temporal
+en la cual almacenaremos el string que luego pasaremos de nuevo a str para 
+devolverlo
 --------------------------------------------------------------------------------
 */
