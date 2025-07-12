@@ -60,32 +60,26 @@ int main(int argc, char **argv)
 }
 
 /*
-Assignment name  : wdmatch
-Expected files   : wdmatch.c
-Allowed functions: 
+Assignment name  : add_prime_sum
+Expected files   : add_prime_sum.c
+Allowed functions: write, exit
 --------------------------------------------------------------------------------
 
-Escriba un programa que tome dos strings y verifique si es posible escriba el 
-primer string con caracteres del segundo string, respetando el orden en que 
-aparecen estos caracteres en el segundo string.
+Escribe un programa que tome un entero positivo como argumento y muestre la suma
+de todos los números primos inferiores o iguales a él, seguido de un \n.
 
-Si es posible, el programa muestra el string, seguido de un \n, de lo contrario
-simplemente muestra un \n.
-
-Si el numero de argumentos no es 2, el programa muestra un \n.
+Si el número de argumentos no es 1, o el argumento no es un número positivo,
+simplemente muestra 0 seguido de un salto de línea.
 
 Ejemplos:
 
-$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e\
-faya$
-$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e\
-$
-$>./wdmatch "quarante deux" "qfqfsudf arzgsayns tsregfdgs sjytdekuoixq " | cat -e\
-quarante deux$
-$>./wdmatch "error" "rrerrrfiiljdfxjyuifrrvcoojh" | cat -e\
-$
-$>./wdmatch | cat -e\
-$
+$>./add_prime_sum 5
+10
+$>./add_prime_sum 7 | cat -e
+17$
+$>./add_prime_sum | cat -e
+0$
+$>
 --------------------------------------------------------------------------------
 */
 
