@@ -38,5 +38,6 @@ int	main(void)
 La funcion strspn busca cuántos caracteres consecutivos desde el inicio de s 
 están presentes en accept.
 Se detiene cuando encuentra un carácter que NO está en accept.
+Devuelve el numero de caracteres que se repiten en ambos strings
 --------------------------------------------------------------------------------
 */
