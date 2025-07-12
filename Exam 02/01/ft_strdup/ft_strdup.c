@@ -32,15 +32,9 @@ int	main(int argc, char **argv)
 }
 
 /*
-Assignment name  : ft_strdup
-Expected files   : ft_strdup.c
-Allowed functions: malloc
 --------------------------------------------------------------------------------
-
 Reproduce el comportamiento de la función strdup (man strdup).
 
-Tu función debe ser declarada de la siguiente manera:
-
-char    *ft_strdup(char *src)
+Duplica un string en un nuevo puntero, reservando memoria para ello
 --------------------------------------------------------------------------------
 */
