@@ -20,15 +20,9 @@ int	main(int argc, char **argv)
 }
 
 /*
-Assignment name  : ft_strcmp
-Expected files   : ft_strcmp.c
-Allowed functions:
 --------------------------------------------------------------------------------
+Reproduce el comportamiento de la función strcmp (string compare) (man strcmp).
 
-Reproduce el comportamiento de la función strcmp (man strcmp).
-
-Tu función debe ser declarada de la siguiente manera:
-
-int    ft_strcmp(char *s1, char *s2)
+Compara dos strings y devuelve un int de la diferencia entre ambos
 --------------------------------------------------------------------------------
 */
