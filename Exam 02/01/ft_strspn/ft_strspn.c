@@ -34,15 +34,9 @@ int	main(void)
 }
 
 /*
-Assignment name	: ft_strspn
-Expected files	: ft_strspn.c
-Allowed functions: None
 --------------------------------------------------------------------------------
-
-Reproduzca exactamente el comportamiento de la función strspn (man strspn).
-
-El prototipo de la función debe ser el siguiente:
-
-size_t	ft_strspn(const char *s, const char *accept)
+La funcion strspn busca cuántos caracteres consecutivos desde el inicio de s 
+están presentes en accept.
+Se detiene cuando encuentra un carácter que NO está en accept.
 --------------------------------------------------------------------------------
 */
