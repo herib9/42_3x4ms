@@ -2,32 +2,26 @@
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
-	int	temp;
-	t_list *start;
+	int	temp;		// almacena los datos de los nodos
+	t_list *start = lst;	// almacena el inicio de la lista
 
-	start = lst;
-	while (lst->next)
+	while (lst->next)	// mientras haya nodos para comparar (el siguiente no sea nulo)
 	{
-		if (((*cmp)(lst->data, lst->next->data)) == 0)
+		if ((*cmp)(lst->data, lst->next->data) == 0)	// si los datos no estan en orden
 		{
-			temp = lst->data;
-			lst->data = lst->next->data;
-			lst->next->data = temp;
-			lst = start;
+			temp = lst->data;		// guarda temporalmente el valor del nodo actual
+			lst->data = lst->next->data;	// coloca el valor del siguiente nodo en el nodo actual
+			lst->next->data = temp;		// coloca el valor temporal en el siguiente nodo
+			lst = start;			// vuelve al inicio de la lista para continuar ordenando
 		}
 		else
-			lst = lst->next;
+			lst = lst->next;		// si los datos estan en orden, pasa al siguiente nodo
 	}
-	return (start);
+	return (start);					// devuelve el inicio de la lista
 }
 
 /*
-Assignment name  : sort_list
-Expected files   : sort_list.c
-Allowed functions: 
-
 --------------------------------------------------------------------------------
-
 Escribe la siguiente funcion:
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
