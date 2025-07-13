@@ -45,7 +45,7 @@ int main(void)
 
 /*
 --------------------------------------------------------------------------------
-Tome un entero y lo convierta en una cadena terminada en nulo.
+Toma un entero y lo convierta en una cadena terminada en nulo.
 
 La función devuelve el resultado en un array de caracteres que debes asignar.
 --------------------------------------------------------------------------------
