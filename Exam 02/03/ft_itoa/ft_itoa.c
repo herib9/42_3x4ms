@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 char *ft_itoa(int nbr) 
 {
 	int	num = nbr;
 	int	len = 0;
-	char *	result;
+	char	*result;
 
 	if (nbr <= 0)
 		len++;
@@ -35,8 +36,11 @@ char *ft_itoa(int nbr)
 
 int main(void)
 {
-	int n = -123;
-	printf("%s\n", ft_itoa(n));
+	int	a = -123;
+	int	b = 123;
+	printf("%s\n", ft_itoa(a));
+	printf("%s\n", ft_itoa(b));
+	printf("%s\n", ft_itoa(INT_MAX));
 }
 
 /*
