@@ -15,7 +15,6 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp))
 	}
 	else
 		ft_list_remove_if(&temp->next, data_ref, cmp);
-	}
 }
 
 /*
@@ -113,11 +112,7 @@ int main()
 }
 
 /*
-Assignment name  : ft_list_remove_if
-Expected files   : ft_list_remove_if.c
-Allowed functions: free
 --------------------------------------------------------------------------------
-
 Escriba una función llamada ft_list_remove_if que elimine de la lista pasada
 cualquier elemento cuyos datos sean "iguales" a los datos de referencia.
 
