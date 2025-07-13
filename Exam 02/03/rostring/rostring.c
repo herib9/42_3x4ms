@@ -1,72 +1,56 @@
 #include <unistd.h>
 
-int	is_space(char c)
+void	rostring(char *s)
 {
-	if (c == ' ' || c == '\t')
-		return (1);
-	return (0);
-}
-/*
-  devuelve 1 si hay espacio o tabulador
-  devuelve 0 si no
-*/
-int	main(int argc, char **argv)
-{
-	if (argc > 1)
+	int	i = 0;
+	int	start = 0;
+	int	end = 0;
+	int	word = 0;
+	int	space = 0;
+
+	while (s[i] == ' ' || s[i] == '\t')
+		i++;
+	start = i;
+	while (s[i] > 32)
+		i++;
+	end = i - 1;
+	while (s[i] == ' ' || s[i] == '\t')
+		i++;
+	while (s[i])
 	{
-		int i = 0;
-		while (argv[1][i] && is_space(argv[1][i]))
-			++i;
-		while (argv[1][i] && !is_space(argv[1][i]))
-			++i;
-		while (argv[1][i] && is_space(argv[1][i]))
-                        ++i;
-		while (argv[1][i])
+		if (s[i] == ' ' || s[i] == '\t')
+			space = 1;
+		else
 		{
-			while (argv[1][i] && is_space(argv[1][i]))
+			if (space == 1)
 			{
-				++i;
+
+				write(1, " ", 1);
+				space = 0;
 			}
-			while (argv[1][i] && !is_space(argv[1][i]))
-			{
-				write(1, &argv[1][i], 1);
-				++i;
-			}
-			write(1, " ", 1);
+			word = 1;
+			write(1, &s[i], 1);
 		}
-		i = 0;
-		while (argv[1][i] && is_space(argv[1][i]))
-			++i;
-		while (argv[1][i] && !is_space(argv[1][i]))
-		{
-			write(1, &argv[1][i], 1);
-			++i;
-		}
+		i++;
 	}
+	if (s[i] == 0 && word == 1)
+		write(1, " ", 1);
+	while (start <= end)
+	{
+		write(1, &s[start], 1);
+		start++;
+	}
+}
+
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+		rostring(av[1]);
 	write(1, "\n", 1);
 }
 
-/* verifica que exista argumento (se paso un string)
-* declara indice i para recorrer string
-* 1º while: mientras argumento exista y haya espacios al principio los salta todos
-* 2º while: recorre la primera palabra sin guardarla ni imprimirla, solo avanza
-* 3º while: salta posibles espacios despues de la primera palabra
-* WHILE principal: mientras exista el argumento
-* 1º while: salta espacios entre palabras
-* 2º while: escribe letra a letra la siguiente palabra
-* write espacio despues de cada palabra
-** hasta aqui hemos imprimido todas las palabras menos la primera
-* reiniciamos i a 0
-* 1º while: salta espacios al inicio
-* 2º while: imprime la primera palabra letra a letra
-* termina con un salto de linea
-
 /*
-Assignment name  : rostring
-Expected files   : rostring.c
-Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
-
 Escribe un programa que tome una cadena y muestre esta cadena después de rotarla
 una palabra hacia la izquierda.
 
