@@ -2,33 +2,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char	**ft_split(char *s)
+char    **ft_split(char *s) 
 {
-	int	i = 0;
-	int	j;
-	char	*start;
-	char	**word = malloc(100 * sizeof(char *));
-	
-	if(!word)
-		return (NULL);
-	while(*s)
-	{
-		while(*s == ' ' || *s == '\t' || *s == '\n')
-			s++;
-		if(!s)
-			break;
-		start = s;
-		while(*s && !(*s == ' ' || *s == '\t' || *s == '\n'))
-			s++;
-		word[i] = malloc(s - start + 1);
-		j = 0;
-		while(start < s)
-			word[i][j++] = *start++;
-		word[i][j] = '\0';
-		i++;
-	}
-	word[i] = NULL;
-	return(word);
+    int i = 0;
+    int letra = 0;
+    int word = 0;
+    char **split = malloc (sizeof(char *) * 10000);
+
+    while (s[i])
+    {   
+        split[word] = malloc (sizeof(char) * 10000);
+        letra = 0;
+        while (s[i] < 33 && s[i] != '\0')
+            i++;
+        if (s[i] == '\0')
+            break ;
+        while (s[i] >= 33) 
+        {   
+            split[word][letra] = s[i];
+            letra++;
+            i++;
+        }   
+        split[word][letra] = '\0';
+        word++;
+    }   
+    split[word] = '\0'L;
+    return (split);
 }
 
 int	main(int ac, char **av)
