@@ -84,11 +84,7 @@ int main(void)
 }
 
 /*
-Assignment name  : flood_fill
-Expected files   : flood_fill.c
-Allowed functions: -
 --------------------------------------------------------------------------------
-
 Escribe una función que tome un char ** como un array bidimensional de char, un
 t_point como las dimensiones de este array y un t_point como el punto de inicio.
 
@@ -111,7 +107,6 @@ La estructura t_point se define así:
     int           y;
   }               t_point;
 --------------------------------------------------------------------------------
-
 Ejemplo:
 
 $> cat test.c
@@ -169,5 +164,6 @@ F000F00F
 F00F000F
 F0FF000F
 FFF0000F
-$> 
+$>
+--------------------------------------------------------------------------------
 */
