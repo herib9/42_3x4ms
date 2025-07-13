@@ -38,11 +38,7 @@ int main(void)
 }
 
 /*
-Assignment name  : ft_range
-Expected files   : ft_range.c
-Allowed functions: malloc
 --------------------------------------------------------------------------------
-
 Escribe la siguiente función:
 
 int     *ft_range(int start, int end)
