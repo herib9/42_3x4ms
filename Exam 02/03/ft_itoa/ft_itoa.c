@@ -40,18 +40,9 @@ int main(void)
 }
 
 /*
-Assignment name  : ft_itoa
-Expected files   : ft_itoa.c
-Allowed functions: malloc
 --------------------------------------------------------------------------------
-
-Escribe una función que tome un entero y lo convierta en una cadena terminada
-en nulo.
+Tome un entero y lo convierta en una cadena terminada en nulo.
 
 La función devuelve el resultado en un array de caracteres que debes asignar.
-
-Tu función debe ser declarada de la siguiente manera:
-
-char	*ft_itoa(int nbr)
 --------------------------------------------------------------------------------
 */
