@@ -41,6 +41,7 @@ int main(void)
 	printf("%s\n", ft_itoa(a));
 	printf("%s\n", ft_itoa(b));
 	printf("%s\n", ft_itoa(INT_MAX));
+	printf("%s\n", ft_itoa(INT_MIN));
 }
 
 /*
