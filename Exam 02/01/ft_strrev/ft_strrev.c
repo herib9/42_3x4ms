@@ -20,6 +20,26 @@ char    *ft_strrev(char *str)
 	return (str);
 }
 
+char	*ft_strrev(char *s)
+{
+	int	i = 0;
+	int	len = 0;
+	int	temp;
+
+	while (s[i])
+		i++;
+	i--;
+	while (i > len)
+	{
+		temp = s[len];
+		s[len] = s[i];
+		s[i] = temp;
+		len--;
+		i++;
+	}
+	return (s);
+}
+
 int main(void)
 {
 	char *str = "hola";
