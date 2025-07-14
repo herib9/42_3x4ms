@@ -11,7 +11,7 @@ void	hidenp(char *s1, char *s2)
 			i++;
 		j++;
 	}
-	if (s1[i] == 0)
+	if (s1[i] == '\0')
 		write(1, "1", 1);
 	else
 		write(1, "0", 1);
