@@ -26,7 +26,7 @@ char    **ft_split(char *s)
         split[word][letra] = '\0';
         word++;
     }   
-    split[word] = '\0'L;
+    split[word] = '\0';
     return (split);
 }
 
