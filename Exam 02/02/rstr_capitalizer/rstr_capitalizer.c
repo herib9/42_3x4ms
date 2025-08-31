@@ -8,11 +8,11 @@ void    rstr(char *s)
 	{
 		if (s[i] >= 'A' && s[i] <= 'Z')
 			s[i] += 32;
-        	if ((s[i] >= 'a' && s[i] <= 'z') && (s[i + 1] <= 32 || s[i + 1] == '\0'))
+        if ((s[i] >= 'a' && s[i] <= 'z') && (s[i + 1] <= 32 || s[i + 1] == '\0'))
 			s[i] -= 32;
-        	write(1, &s[i], 1);
-        	i++;
-        }
+        write(1, &s[i], 1);
+        i++;
+	}
 }
 
 int     main(int ac, char **av)
