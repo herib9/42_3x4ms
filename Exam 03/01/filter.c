@@ -7,8 +7,8 @@ int	main(int ac, char **av)
 	char	buffer[99999];
 	int		i = 0;
 	int		leido = 1;
-	int		j;
 	int		len;
+	int		j;
 
 	if (ac != 2)
 		return (1);
