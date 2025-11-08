@@ -58,5 +58,4 @@ No se realizará ninguna llamada a otra función en el descriptor de archivo ent
 a get_next_line.
 
 Por último, consideramos que get_next_line tiene un comportamiento indefinido al leer
-desde un archivo binario.
---------------------------------------------------------------------------------*/
+desde un archivo binario.*/
