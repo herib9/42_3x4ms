@@ -36,7 +36,6 @@ int	main(int ac, char **av)
 	return (0);
 }
 
-
 /*Assignment name: filter
 Expected files: filter.c
 Allowed functions: read, write, strlen, memmem, memmove, malloc, calloc,
