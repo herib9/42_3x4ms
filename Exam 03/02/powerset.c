@@ -22,7 +22,7 @@ void buscar(int *nums, int size, int target, int idx, int *actual, int tam_actua
 	if(idx >= size)
 		return;
 	buscar(nums, size, target, idx + 1, actual, tam_actual, suma);
-    	actual[tam_actual] = nums[idx];
+    actual[tam_actual] = nums[idx];
    	buscar(nums, size, target, idx + 1, actual, tam_actual + 1, suma + nums[idx]);
 }
 int main(int ac, char **av)
