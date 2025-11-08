@@ -48,7 +48,6 @@ char	*get_next_line(int fd)
     fd = open("test.txt", O_RDONLY);
     if (fd == -1)
         return (1);
-    
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("%s", line);
