@@ -45,9 +45,9 @@ realloc, free, printf, fprintf, stdout, stderr, perror
 Escribe un programa que tome un único argumento.
 
 Tu programa leerá desde stdin y escribirá todo el contenido leído en stdout,
-excepto que cada aparición de s debe ser reemplazada por “*” (tantas como la longitud
-de s). Tu programa se probará con tamaños de búfer aleatorios, utilizando una función
-de lectura personalizada.
+excepto que cada aparición de s debe ser reemplazada por “*” (tantas como la
+longitud de s). Tu programa se probará con tamaños de búfer aleatorios, utilizando
+una función de lectura personalizada.
 
 Por lo tanto, el búfer establecido en tu programa se llenará con un
 número diferente de caracteres en cada nueva llamada.
@@ -62,11 +62,11 @@ sed 's/bonjour/******* /g'
 will behave in the same way as:
 sed's/abc/*** /g'
 
-En términos más generales, su programa debe ser equivalente al script de shell filter.sh
-presente en este directorio (puede comparar su programa con él).
+En términos más generales, su programa debe ser equivalente al script de shell
+filter.sh presente en este directorio (puede comparar su programa con él).
 
-En caso de error durante una lectura o un malloc, debe escribir «Error: » seguido del
-mensaje de error en stderr y devolver 1.
+En caso de error durante una lectura o un malloc, debe escribir «Error: » seguido
+del mensaje de error en stderr y devolver 1.
 
 Si el programa se llama sin argumentos, con un argumento vacío o con varios
 argumentos, debe devolver 1.
