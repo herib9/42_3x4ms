@@ -60,12 +60,12 @@ Allowed functions: atoi, printf, fprintf, malloc, calloc, realloc, free, stdout,
 write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome como argumento un entero n seguido de un conjunto s de
-enteros distintos.
+Escribe un programa que tome como argumento un entero n seguido de un conjunto s
+de enteros distintos.
 Tu programa debe mostrar todos los subconjuntos de s cuya suma de elementos sea n.
 
-El orden de las líneas no es importante, pero el orden de los elementos en un subconjunto sí lo es:
-debe coincidir con el orden en el conjunto inicial s.
+El orden de las líneas no es importante, pero el orden de los elementos en un 
+subconjunto sí lo es: debe coincidir con el orden en el conjunto inicial s.
 De esta manera, no debe haber duplicados (por ejemplo: «1 2» y «2 1»).
 
 Por ejemplo, utilizando el comando ./powerset 5 1 2 3 4 5,
@@ -82,12 +82,11 @@ pero esta no:
 3 2
 5
 
-
 En caso de error de malloc, tu programa se cerrará con el código 1.
-
 No realizaremos pruebas con conjuntos no válidos (por ejemplo, «1 1 2»).
 
-Pista: el subconjunto vacío es un subconjunto válido de cualquier conjunto. Se mostrará como una línea vacía.
+Pista: el subconjunto vacío es un subconjunto válido de cualquier conjunto.
+Se mostrará como una línea vacía.
 
 Por ejemplo, esto debería funcionar:
 $> ./powerset 3 1 0 2 4 5 3 | cat -e
