@@ -19,11 +19,7 @@ char	*get_next_line(int fd)
 			r = read(fd, buf, BUFFER_SIZE);
 			pos = 0;
 			if (r <= 0)
-			{
-				//pos = 0;
-				//r = 0;
 				break;
-			}
 		}
 		if (i >= 9999)
 		{
@@ -40,7 +36,11 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*int	main(void)
+/*
+#include <stdio.h>
+#include <fcntl.h>
+
+int	main(void)
 {
     int		fd;
     char	*line;
