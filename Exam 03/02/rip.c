@@ -22,7 +22,7 @@ int	invalid(char *s)
 	return (open + close);
 }
 
-void generate_result(char *s,  int remove, int delete, int pos)
+void result(char *s,  int remove, int delete, int pos)
 {
 	if (remove == delete && !invalid(s))
 	{
@@ -48,7 +48,7 @@ int main(int ac, char **av)
 		return (1);
 
 	int remove = invalid(av[1]);
-	genrate_result(av[1], remove, 0, 0);
+	result(av[1], remove, 0, 0);
 	return (0);
 }
 
