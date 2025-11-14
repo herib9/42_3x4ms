@@ -82,12 +82,10 @@ int main(int ac, char **av)
 /*Assignment name  : permutations
 Expected files   : *.c *.h
 Allowed functions: puts, malloc, calloc, realloc, free, write
----------------------------------------------------------------
+-------------------------------------------------------------------------
 
 Escribe un programa que imprima todas las permutaciones de una cadena dada como argumento.
-
 Las soluciones deben darse en orden alfabético.
-
 No probaremos tu programa con cadenas que contengan duplicados (por ejemplo: «abccd»).
 
 Por ejemplo, esto debería funcionar:
