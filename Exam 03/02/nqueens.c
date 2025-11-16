@@ -1,12 +1,5 @@
-#include "stdlib.h"
-#include "unistd.h"
-
-void ft_putnbr(int nb)
-{
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	write(1, &"0123456789"[nb % 10], 1);
-}
+#include <stdlib.h>
+#include <unistd.h>
 
 int is_valid_pos(int *table, int x, int y)
 {
@@ -23,9 +16,13 @@ int is_valid_pos(int *table, int x, int y)
 void print_table(int *table, int size)
 {
 	int i = 0;
-
 	while (i < size)
-		ft_putnbr(table[i++]);
+	{
+		char c = table[i++] + '0';
+		write(1, &c, 1);
+		if (i < size)
+			write(1, " ", 1);
+	}
 	write(1, "\n", 1);
 }
 
@@ -45,11 +42,13 @@ void n_queen(int *table, int y, int size)
 	}
 }
 
-int main (int ac, char **av)
+int main(int ac, char **av)
 {
-	if (ac < 2)
-		return(write(1, "\n", 1), 0);
+	if (ac != 2)
+		return(1);
 	int size = atoi(av[1]);
+	if (size <= 0)
+		return (0);
 	int table[size];
 	n_queen(table, 0, size);
 	return (0);
