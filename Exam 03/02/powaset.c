@@ -33,7 +33,7 @@ int	main(int ac, char **av)
 		return (1);
 	target = atoi(av[1]);
 	if (ac - 2 <= 0)
-	return (1);
+		return (1);
 	if (!(nums = malloc(sizeof(int) * (ac - 2))))
 		return (1);
 	while (pos < ac - 2)
