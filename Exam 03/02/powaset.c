@@ -19,7 +19,7 @@ void	powaset(int	pos_nums, int total_nums, int pos_actual, int suma)
 		printf("\n");
 		return;
 	}
-	if (pos_nums == total_nums)
+	if (pos_nums >= total_nums)
 		return;
 	powaset(pos_nums + 1, total_nums, pos_actual, suma);
 	actual[pos_actual] = nums[pos_nums];
