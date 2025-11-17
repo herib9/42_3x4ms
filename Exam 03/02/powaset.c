@@ -5,12 +5,12 @@ int	*nums;
 int	target;
 int	actual[100];
 
-void	powerset(int pos, int size, int tam, int suma)
+void	powaset(int	pos_nums, int total_nums, int pos_actual, int suma)
 {
 	if (suma == target)
 	{
-		int	i = 0;
-		while (i < tam)
+		int i = 0;
+		while (i < pos_actual)
 		{
 			if (i > 0)
 				printf(" ");
@@ -19,27 +19,27 @@ void	powerset(int pos, int size, int tam, int suma)
 		printf("\n");
 		return;
 	}
-	if (pos >= size)
+	if (pos_nums == total_nums)
 		return;
-	powerset(pos + 1, size, tam, suma);
-	actual[tam] = nums[pos];
-	powerset(pos + 1, size, tam + 1, suma + nums[pos]);
+	powaset(pos_nums + 1, total_nums, pos_actual, suma);
+	actual[pos_actual] = nums[pos_nums];
+	powaset(pos_nums + 1, total_nums, pos_actual + 1, suma + nums[pos_nums]);
 }
 
 int	main(int ac, char **av)
 {
-	int	pos = 0;
+	int	pos_nums = 0;
 	if (ac < 3)
 		return (1);
 	target = atoi(av[1]);
 	if (!(nums = malloc(sizeof(int) * (ac - 2))))
 		return (1);
-	while (pos < ac - 2)
+	while (pos_nums < ac - 2)
 	{
-		nums[pos] = atoi(av[pos + 2]);
-		pos++;
+		nums[pos_nums] = atoi(av[pos_nums + 2]);
+		pos_nums++;
 	}
-	powerset(0, ac - 2, 0, 0);
+	powaset(0, ac - 2, 0, 0);
 	free(nums);
-	return (0);
+	return(0);
 }
