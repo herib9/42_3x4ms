@@ -3,28 +3,34 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-char	*get_next_line(int fd)
-{
-	int	i = 0;
-	int	leido;
-	char c;
-	char *str;
+#include "gnl.h"
 
-	if (!(str = malloc(100000)))
+char	*gnl(int fd)
+{
+	static char	buffer[BUFFER_SIZE];
+	static int	pos = 0;
+	static int	leido = 0;
+	char		*line;
+	int 		i = 0;
+
+	if (fd < 0 || BUFFER_SIZE <= 0 || !(line = malloc(10000)))
 		return (NULL);
-	while ((leido = read(fd, &c, 1)) > 0)
+	while (1)
 	{
-		str[i++] = c;
-		if (c == '\n')
+		if (pos >= leido)
+		{
+			if ((leido = read(fd, buffer, BUFFER_SIZE)) <= 0)
+				break;
+			pos = 0;
+		}
+		line[i++] = buffer[pos++];
+		if (line[i - 1] == '\n')
 			break;
 	}
-	str[i] = '\0';
-	if (i == 0 || leido < 0)
-	{
-		free(str);
-		return (NULL);
-	}
-	return (str);
+	line[i] = '\0';
+	if (i == 0)
+		return (free(line), NULL);
+	return (line);
 }
 
 int	main(void)
