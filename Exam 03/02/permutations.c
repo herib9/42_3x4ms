@@ -8,14 +8,6 @@ void swap(char *a, char *b)
 	*b = tmp;
 }
 
-int len(char *s)
-{
-	int i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
 void sort(char *s, int n)
 {
 	int i = 0;
@@ -58,22 +50,22 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 		return 1;
-	int n = len(av[1]);
-	char *s = malloc(n + 1);
-	char *res = malloc(n + 1);
-	int *used = calloc(n, sizeof(int));
 	int i = 0;
-	while (av[1][i])
-	{
-		s[i] = av[1][i];
+	while (av[1][i])						
 		i++;
-	}
-	s[i] = 0;
-	res[n] = 0;
+	int n = i;								
+	char *s = malloc(n + 1);			
+	char *res = malloc(n + 1);				
+	int *used = calloc(n, sizeof(int));		
+	i = 0;
+	while (i < n)							
+		s[i] = av[1][i++];
+	s[n] = 0;							
+	res[n] = 0;								
+	sort(s, n);						
+	perm(res, s, used, 0, n);				
 
-	sort(s, n);
-	perm(res, s, used, 0, n);
-	free(s);
+	free(s);								
 	free(res);
 	free(used);
 	return (0);
