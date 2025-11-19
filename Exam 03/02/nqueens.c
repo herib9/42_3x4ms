@@ -47,8 +47,6 @@ int main(int ac, char **av)
 	if (ac != 2)
 		return(1);
 	int size = atoi(av[1]);
-	if (size <= 0)
-		return (0);
 	int table[size];
 	n_queen(table, 0, size);
 	return (0);
