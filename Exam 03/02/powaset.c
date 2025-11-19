@@ -5,12 +5,12 @@ int	*nums;
 int	target;
 int	actual[100];
 
-void	powaset(int	pos_nums, int total_nums, int pos_actual, int suma)
+void	powaset(int p_nums, int size, int p_actual, int suma)
 {
 	if (suma == target)
 	{
 		int i = 0;
-		while (i < pos_actual)
+		while (i < p_actual)
 		{
 			if (i > 0)
 				printf(" ");
@@ -19,27 +19,22 @@ void	powaset(int	pos_nums, int total_nums, int pos_actual, int suma)
 		printf("\n");
 		return;
 	}
-	if (pos_nums >= total_nums)
+	if (p_nums == size)
 		return;
-	powaset(pos_nums + 1, total_nums, pos_actual, suma);
-	actual[pos_actual] = nums[pos_nums];
-	powaset(pos_nums + 1, total_nums, pos_actual + 1, suma + nums[pos_nums]);
+	powaset(p_nums + 1, size, p_actual, suma);
+	actual[p_actual] = nums[p_nums];
+	powaset(p_nums + 1, size, p_actual + 1, suma + nums[p_nums]);
 }
 
 int	main(int ac, char **av)
 {
-	int	pos_nums = 0;
-	if (ac < 3)
-		return (1);
+	int i = -1;
+	if (ac < 3 || !(nums = malloc(sizeof(int) * (ac - 2))))
+		return 1;
 	target = atoi(av[1]);
-	if (!(nums = malloc(sizeof(int) * (ac - 2))))
-		return (1);
-	while (pos_nums < ac - 2)
-	{
-		nums[pos_nums] = atoi(av[pos_nums + 2]);
-		pos_nums++;
-	}
+	while (++i < ac - 2)
+		nums[i] = atoi(av[i + 2]);
 	powaset(0, ac - 2, 0, 0);
 	free(nums);
-	return(0);
+	return 0;
 }
