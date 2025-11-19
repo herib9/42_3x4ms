@@ -1,57 +1,43 @@
-# include <unistd.h>
-# include <stdlib.h>	
-# include <stdio.h>
-# include <fcntl.h>
-# include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-void buscar(int *nums, int size, int target, int idx, int *actual, int tam_actual, int suma)
+int	*nums;
+int	target;
+int	actual[100];
+
+void	powaset(int p_nums, int size, int p_actual, int suma)
 {
-	if(suma == target)
+	if (suma == target)
 	{
 		int i = 0;
-		while(i < tam_actual)
+		while (i < p_actual)
 		{
-			printf("%d", actual[i]);
-			if(i < tam_actual - 1)
+			if (i > 0)
 				printf(" ");
-			i++;
+			printf("%d", actual[i++]);
 		}
 		printf("\n");
 		return;
 	}
-	if(idx >= size)
+	if (p_nums == size)
 		return;
-	buscar(nums, size, target, idx + 1, actual, tam_actual, suma);
-    actual[tam_actual] = nums[idx];
-   	buscar(nums, size, target, idx + 1, actual, tam_actual + 1, suma + nums[idx]);
+	powaset(p_nums + 1, size, p_actual, suma);
+	actual[p_actual] = nums[p_nums];
+	powaset(p_nums + 1, size, p_actual + 1, suma + nums[p_nums]);
 }
-int main(int ac, char **av)
+
+int	main(int ac, char **av)
 {
-	if(ac < 2)
-		return(1);
-	int i = 0;
-	int target = atoi(av[1]);
-	int size = ac - 2;
-	if(size <= 0)
-		return(1);
-	int *nums = malloc(sizeof(int) * size);
-	if(!nums)
-		return (1);
-	while(i < size)
-	{
+	int i = -1;
+	if (ac < 3 || !(nums = malloc(sizeof(int) * (ac - 2))))
+		return 1;
+	target = atoi(av[1]);
+	while (++i < ac - 2)
 		nums[i] = atoi(av[i + 2]);
-		i++;
-	}
-	int *actual = malloc(sizeof(int) * size);
-	if(!actual)
-	{
-		free(nums);
-		return (1);
-	}
-	buscar(nums, size, target, 0, actual, 0, 0);
-	free(actual);
+	powaset(0, ac - 2, 0, 0);
 	free(nums);
-	return (0);
+	return 0;
 }
 
 /*Assignment name  : powerset
