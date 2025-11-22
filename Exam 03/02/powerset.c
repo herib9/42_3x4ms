@@ -1,10 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*nums;
-int	target;
-int	actual[100];
-
+int	*nums;			//array para almacenar numeros
+int	target;			//numero a conseguir
+int	actual[100];	//almacenaje para el subconjunto en construccion
+/*p_num = indicador de posicion en el almacenaje
+size = saber cuantos numeros hay
+p_act = cuantos numeros llevo en el subconjunto actual
+suma = cuanto suman los numeros del subconjunto actual*/
 void	powaset(int p_num, int size, int p_act, int suma)
 {
 	if (suma == target)
@@ -42,7 +45,17 @@ int	main(int ac, char **av)
 	return(0);
 }
 
-/*Assignment name  : powerset
+/*contador para recorrer los argumentos y llenar el array nums
+av1 es un string, lo convertimos a int y lo guardamos en target
+reservo memoria para nums, reservo - 2 porque no necesito reservar para el ejecutor ni para el target
+mientras i sea menos que el numero de argumentos
+almaceno en nums cada argumento
+llamo a la funcion recursiva
+pos_num = 0; size = ac-2; p_act; suma = 0;
+libero memoria
+salgo
+
+Assignment name  : powerset
 Expected files   : *.c *.h
 Allowed functions: atoi, printf, fprintf, malloc, calloc, realloc, free, stdout,
 write
