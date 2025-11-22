@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -6,12 +5,12 @@ int	*nums;
 int	target;
 int	actual[100];
 
-void	powaset(int p_nums, int size, int p_actual, int suma)
+void	powaset(int p_num, int size, int p_act, int suma)
 {
 	if (suma == target)
 	{
 		int i = 0;
-		while (i < p_actual)
+		while (i < p_act)
 		{
 			if (i > 0)
 				printf(" ");
@@ -20,24 +19,27 @@ void	powaset(int p_nums, int size, int p_actual, int suma)
 		printf("\n");
 		return;
 	}
-	if (p_nums == size)
+	if (p_num >= size)
 		return;
-	powaset(p_nums + 1, size, p_actual, suma);
-	actual[p_actual] = nums[p_nums];
-	powaset(p_nums + 1, size, p_actual + 1, suma + nums[p_nums]);
+	powaset(p_num + 1, size, p_act, suma);
+	actual[p_act] = nums[p_num];
+	powaset(p_num + 1, size, p_act + 1, suma + nums[p_num]);
 }
 
 int	main(int ac, char **av)
 {
-	int i = -1;
+	int i = 0;
 	if (ac < 3 || !(nums = malloc(sizeof(int) * (ac - 2))))
-		return 1;
+		return(1);
 	target = atoi(av[1]);
-	while (++i < ac - 2)
+	while (i < ac - 2)
+	{
 		nums[i] = atoi(av[i + 2]);
+		i++;
+	}
 	powaset(0, ac - 2, 0, 0);
 	free(nums);
-	return 0;
+	return(0);
 }
 
 /*Assignment name  : powerset
@@ -46,12 +48,12 @@ Allowed functions: atoi, printf, fprintf, malloc, calloc, realloc, free, stdout,
 write
 --------------------------------------------------------------------------------
 
-Escribe un programa que tome como argumento un entero n seguido de un conjunto s
-de enteros distintos.
+Escribe un programa que tome como argumento un entero n seguido de un conjunto s de
+enteros distintos.
 Tu programa debe mostrar todos los subconjuntos de s cuya suma de elementos sea n.
 
-El orden de las líneas no es importante, pero el orden de los elementos en un 
-subconjunto sí lo es: debe coincidir con el orden en el conjunto inicial s.
+El orden de las líneas no es importante, pero el orden de los elementos en un subconjunto sí lo es:
+debe coincidir con el orden en el conjunto inicial s.
 De esta manera, no debe haber duplicados (por ejemplo: «1 2» y «2 1»).
 
 Por ejemplo, utilizando el comando ./powerset 5 1 2 3 4 5,
@@ -70,9 +72,7 @@ pero esta no:
 
 En caso de error de malloc, tu programa se cerrará con el código 1.
 No realizaremos pruebas con conjuntos no válidos (por ejemplo, «1 1 2»).
-
-Pista: el subconjunto vacío es un subconjunto válido de cualquier conjunto.
-Se mostrará como una línea vacía.
+Pista: el subconjunto vacío es un subconjunto válido de cualquier conjunto. Se mostrará como una línea vacía.
 
 Por ejemplo, esto debería funcionar:
 $> ./powerset 3 1 0 2 4 5 3 | cat -e

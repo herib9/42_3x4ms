@@ -10,33 +10,35 @@ int	invalid(char *s)
 	{
 		if (s[i] == '(')
 			open++;
-		else if (s[i] == ')')
+		else if (s[i] == ')')		//si encuentra '(' incrementa contador open
 		{
-			if (open > 0)
-				open--;
-			else
+			if (open > 0)			//si hay parentesis abiertos pendientes
+				open--;				//los empareja y decrementa open
+			else					//si no, ese parentesis está de mas
 				close++;
 		}
 		i++;
 	}
-	return (open + close);
+	return (open + close);			//retorna el total de parentesis que sobran
 }
-
-void result(char *s,  int remove, int delete, int pos)
+/*remove: parentesis a eliminar(calculado por valid)
+del: parentesis ya eliminados
+pos: posicion actual en el string*/
+void result(char *s, int remove, int del, int pos)
 {
-	if (remove == delete && !invalid(s))
+	if (remove == del && !invalid(s))				//si del == remove y la cadena es valida
 	{
-		puts(s);
+		puts(s);									//imprime la solucion y termina
 		return ;
 	}
 	while (s[pos])
 	{
-		if (s[pos] == '(' || s[pos] == ')')
+		if (s[pos] == '(' || s[pos] == ')')			//si encuentra '(' ó ')'
 		{
-			char c = s[pos];
-			s[pos] = ' ';
-			generate_result(s, remove, delete + 1, pos + 1);
-			s[pos] = c;
+			char c = s[pos];						//guarda una copia para modificar s[pos] temporalmente
+			s[pos] = ' ';							//lo reemplaza por espacio
+			result(s, remove, del + 1, pos + 1);	//llama recursivamente con del+1 (1 eliminacion mas)
+			s[pos] = c;								//restaura el parentesis guardado en c a s[pos]
 		}
 		pos++;
 	}
@@ -44,15 +46,16 @@ void result(char *s,  int remove, int delete, int pos)
 
 int main(int ac, char **av)
 {
-	if (ac != 2)
-		return (1);
-
-	int remove = invalid(av[1]);
-	result(av[1], remove, 0, 0);
-	return (0);
+	if (ac == 2)
+		result(av[1], invalid(av[1]), 0, 0);
+	return (ac != 2);
 }
 
-/*Assignment name  : rip
+/*llama a result con el argumento pasado, al numero de eliminaciones necesarias
+del = 0 -> aun no se ha eliminado nada)
+pos = 0 -> empezando desde el inicio
+
+Assignment name  : rip
 Expected files   : *.c *.h
 Allowed functions: puts, write
 --------------------------------------------------------------------------------
