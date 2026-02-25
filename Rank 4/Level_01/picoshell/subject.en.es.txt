@@ -1,0 +1,39 @@
+Nombre de la tarea:		picoshell
+Archivos esperados:		picoshell.c
+Funciones permitidas:	close, fork, wait, exit, execvp, dup2, pipe
+___________________________________________________________________
+
+Escribe la siguiente función:
+
+int picoshell(char **cmds[]);
+
+El objetivo de esta función es ejecutar una canalización. Debe ejecutar cada una de ellas.
+comandos de cmds y conectar la salida de uno a la entrada del
+siguiente comando (como en una shell).
+mi
+Cmds contiene una lista de comandos válidos terminada en nulo. Cada fila
+Los comandos son una matriz argv directamente utilizable para una llamada a execvp. El primero
+Los argumentos de cada comando son el nombre o la ruta del comando y se pueden pasar como argumento.
+directamente como primer argumento de execvp.
+
+Si se produce algún error, la función debe devolver 1 (por supuesto, debe hacerlo).
+Cierra todos los descriptores de archivo abiertos previamente; de ​​lo contrario, la función deberá esperar a que finalicen todos los procesos hijos.
+procesos y devuelve 0. Encontrará en este directorio un archivo main.c que
+contendrá algo que te ayudará a probar tu función.
+
+
+Ejemplos:
+./picoshell /bin/ls "|" /usr/bin/grep picoshell
+picoshell
+./picoshell echo 'squalala' "|" cat "|" sed 's/a/b/g'
+squblblb
+
+___________________________________________________________________
+
+Resumen antiguo de un estudiante:
+Se te proporciona una función principal. Esta convierte los argumentos recibidos en un array de comandos.
+de cadenas. Cuando hay una tubería, los comandos que siguen a la tubería están en la siguiente
+matriz de cadenas. Debes crear una canalización utilizando los comandos que recibes de
+la función principal, y ejecutarla. Si se produce algún error, la función debe devolver 1.
+Cierre todos los FFS antes de regresar. Si los comandos se ejecutaron correctamente, espere.
+Los procesos hijos devuelven 0.
