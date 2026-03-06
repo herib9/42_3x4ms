@@ -65,7 +65,7 @@ node	*parse_add(char **s);
 node	*parse_primary(char **s)
 {
 	node *ret;
-	node temp;
+	node temp = {VAL, 0, NULL, NULL};
 
 	if(accept(s, '('))
 	{
@@ -80,10 +80,7 @@ node	*parse_primary(char **s)
 	}
 	if(isdigit(**s))
 	{
-		temp.type = VAL;
 		temp.val = **s - '0';
-		temp.l = NULL;
-		temp.r = NULL;
 		(*s)++;
 		return(new_node(temp));
 	}
@@ -93,11 +90,7 @@ node	*parse_primary(char **s)
 
 node	*parse_multi(char **s)
 {
-	node *l;
-	node *r;
-	node temp;
-
-	l = parse_primary(s);
+	node *l = parse_primary(s), *r, temp = {MULTI, 0, NULL, NULL};
 	if(!l)
 		return NULL;
 	while(accept(s, '*'))
@@ -108,8 +101,6 @@ node	*parse_multi(char **s)
 			destroy_tree(l);
 			return NULL;
 		}
-		temp.type = MULTI;
-		temp.val = 0;
 		temp.l = l;
 		temp.r = r;
 		l = new_node(temp);
@@ -119,11 +110,7 @@ node	*parse_multi(char **s)
 
 node	*parse_add(char **s)
 {
-	node *l;
-	node *r;
-	node temp;
-
-	l = parse_multi(s);
+	node *l = parse_multi(s), *r, temp = {ADD, 0, NULL, NULL};
 	if(!l)
 		return NULL;
 	while(accept(s, '+'))
@@ -134,8 +121,6 @@ node	*parse_add(char **s)
 			destroy_tree(l);
 			return NULL;
 		}
-		temp.type = ADD;
-		temp.val = 0;
 		temp.l = l;
 		temp.r = r;
 		l = new_node(temp);
@@ -159,16 +144,11 @@ node	*parse_expr(char *s)
 
 int	eval_tree(node *tree)
 {
-	switch (tree->type)
-	{
-		case ADD:
-			return (eval_tree(tree->l) + eval_tree(tree->r));
-		case MULTI:
-			return (eval_tree(tree->l) * eval_tree(tree->r));
-		case VAL:
-			return (tree->val);
-	}
-	return 0;
+	if (tree->type == ADD)
+		return (eval_tree(tree->l) + eval_tree(tree->r));
+	if (tree->type == MULTI)
+		return (eval_tree(tree->l) * eval_tree(tree->r));
+	return (tree->val);
 }
 
 int	main(int argc, char **argv)
@@ -180,4 +160,5 @@ int	main(int argc, char **argv)
 		return (1);
 	printf("%d\n", eval_tree(tree));
 	destroy_tree(tree);
+	return 0;
 }
